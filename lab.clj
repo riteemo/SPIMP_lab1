@@ -6,4 +6,11 @@
    {:name "Dasha" :age 21 :city "Kazan"}
    {:name "Egor"  :age 20 :city "Sochi"}])
 
-(println users)
+(defn group-users-by-key [users key]
+  (group-by key users))
+
+(println "Group by age:")
+(println (group-users-by-key users :age))
+
+(println "\nGroup by city:")
+(println (group-users-by-key users :city))
